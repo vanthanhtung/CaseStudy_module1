@@ -101,8 +101,8 @@
         }
         thayAnh(score);
         thungbia.creatThungBia();
-        document.getElementById('score').innerHTML ="Score: "+ score;
-        document.getElementById('mang').innerHTML ="Live: "+ mang;
+        document.getElementById('score').innerHTML ="Điểm: "+ score;
+        document.getElementById('mang').innerHTML ="Mạng: "+ mang;
         nhacNen.play();
         endGame(mang);
     }
@@ -132,7 +132,7 @@
             clearInterval(timeID);
             clearInterval(timeID2);
             nhacNen.pause();
-           thongBao = window.confirm("You Lose!!! Play again???")
+           thongBao = window.confirm("Thua mất rồi!!! Muốn chơi nữa hông?")
             if (thongBao){
                 window.location.reload();
             }
