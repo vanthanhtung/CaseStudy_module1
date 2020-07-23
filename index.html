@@ -15,7 +15,7 @@
         <td> <div><label id="mang"></label></div> </td>
     </tr>
     <tr>
-         <td colspan="2"> <img src="img/bo1.jpg" style="width: 450px;height: 500px; float: left" id="image"> </td>
+         <td colspan="2"> <img src="img/bo0.jpg" style="width: 450px;height: 500px; float: left" id="image"> </td>
     </tr>
 </table>
 <script>
@@ -32,7 +32,7 @@
     var soundGetScore;
     let speed = 10;
     let remainPoint = 0;
-    let imgID=1;
+    let imgID =0;
     let timeID;
     let timeID2;
     window.addEventListener("mousemove", moveMouse)
@@ -87,7 +87,8 @@
     }
 
     function soundAll() {
-        nhacNen = new Audio("nhacNen.mp3");
+        let soundrandom = Math.floor(Math.random() * (8)) + 1;
+        nhacNen = new Audio("sound/nhacnen"+soundrandom+".mp3");
         soundmiss = new Audio("sound/break.wav");
         soundEndGame = new Audio("sound/laugh.wav");
         soundGetScore = new Audio("sound/ghidiem.wav");
